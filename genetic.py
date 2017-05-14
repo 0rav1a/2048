@@ -64,7 +64,7 @@ def getNewGeneration(generation = []):
     
     else:
         selection(generation)
-        '''
+
         totalFit = 0
         for individual in generation:
             totalFit += individual.getFitness()
@@ -75,11 +75,6 @@ def getNewGeneration(generation = []):
             
             child = reproduction(parent1, parent2)
             newGeneration.append(child)
-        '''
-        for individual in generation:
-            newGeneration.append(individual)
-            newGeneration.append(individual.clone())
-            newGeneration[-1].mutate(MUTATION)
         
     return newGeneration
     
